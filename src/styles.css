@@ -1,0 +1,344 @@
+/* ============================================================
+   FARPA ENCRAVADA — punk editorial claro
+   branco/cinza/preto · Helvetica bold · um fio de vermelho
+   ============================================================ */
+
+:root {
+  --bg: #f4f4f2;
+  --ink: #111111;
+  --gray: #6b6b6b;
+  --gray-light: #a3a3a3;
+  --line: #d8d8d4;
+  --accent: #d92b1c;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- nav ---------- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.wordmark {
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wordmark em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: var(--gray);
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding: 12vh 0 10vh;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero h1 {
+  font-size: clamp(52px, 11vw, 150px);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.hero h1 .linha2 {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--ink);
+}
+
+.hero-sub {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 24px;
+}
+
+.hero-quem {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.hero-oneliner {
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.hero-tagline {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--gray-light);
+  max-width: 480px;
+}
+
+/* ---------- seções ---------- */
+
+section {
+  padding: 88px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.sec-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.sec-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.sec-head h2 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.sec-body {
+  display: grid;
+  grid-template-columns: minmax(0, 62ch) 1fr;
+  gap: 40px;
+}
+
+.sec-body p {
+  font-size: 17px;
+  margin-bottom: 16px;
+  color: #2b2b2b;
+}
+
+.lead {
+  font-size: 20px !important;
+  font-weight: 700;
+  color: var(--ink) !important;
+}
+
+/* ---------- placeholders (foto, cards) ---------- */
+
+.placeholder {
+  border: 2px dashed var(--line);
+  color: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 24px;
+  min-height: 220px;
+}
+
+/* ---------- produção: grid de créditos ---------- */
+
+.creditos {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.credito-card {
+  border: 1px solid var(--line);
+  padding: 20px;
+  background: #fff;
+}
+
+.credito-card .banda {
+  font-weight: 900;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.credito-card .meta {
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 6px;
+}
+
+/* ---------- botões / links de ação ---------- */
+
+.acoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.btn.cheio {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.btn.cheio:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- contato ---------- */
+
+.contato-email {
+  font-size: clamp(22px, 4vw, 44px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  border-bottom: 4px solid var(--accent);
+  word-break: break-all;
+}
+
+.contato-email:hover {
+  color: var(--accent);
+}
+
+/* ---------- footer ---------- */
+
+footer {
+  padding: 32px 0 48px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--gray-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.footer-inner a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.footer-inner a:hover {
+  color: var(--ink);
+}
+
+/* ---------- responsivo ---------- */
+
+@media (max-width: 760px) {
+  section {
+    padding: 60px 0;
+  }
+  .sec-body {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    position: static;
+  }
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 24px;
+  }
+  .nav-links {
+    gap: 8px 14px;
+  }
+  .nav-links a {
+    font-size: 11px;
+  }
+}
