@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "fetch-videos": "node scripts/fetch-videos.mjs",
+    "prebuild": "node scripts/fetch-videos.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

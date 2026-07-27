@@ -57,6 +57,8 @@ export const CONTEUDO = {
     "Produção musical, home studio, guitarra, gear e vlogs ensaio.",
   chamadaYt: "Assistir no YouTube",
   chamadaIg: "Seguir no Instagram",
+  videosTitulo: "Últimos vídeos", // rótulo acima do grid
+  videosVazio: "Vídeos em breve — o grid puxa do canal automaticamente.", // fallback se a lista vier vazia
 };
 
 export const CONTATO = {
