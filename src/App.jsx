@@ -9,6 +9,9 @@ const NAV = [
   { href: "#contato", label: "Contato" },
 ];
 
+// resolve arquivos de /public respeitando o base do GitHub Pages
+const asset = (file) => `${import.meta.env.BASE_URL}${file}`;
+
 const SecHead = ({ num, children }) => (
   <div className="sec-head">
     <span className="sec-num">{num}</span>
@@ -21,8 +24,8 @@ export default function App() {
     <>
       <nav className="nav">
         <div className="nav-inner">
-          <a className="wordmark" href="#topo">
-            Farpa <em>Encravada</em>
+          <a className="wordmark" href="#topo" aria-label={HERO.nome}>
+            <img className="wordmark-logo" src={asset(HERO.logo)} alt={HERO.nome} />
           </a>
           <div className="nav-links">
             {NAV.map((l) => (
@@ -33,11 +36,9 @@ export default function App() {
       </nav>
 
       <header className="hero" id="topo">
-        <div className="wrap">
-          <h1>
-            Farpa
-            <span className="linha2">Encravada</span>
-          </h1>
+        <h1 className="visually-hidden">{HERO.nome}</h1>
+        <img className="hero-banner" src={asset(HERO.banner)} alt={HERO.nome} />
+        <div className="wrap hero-copy">
           <div className="hero-sub">
             <span className="hero-quem">{HERO.quem}</span>
             <span className="hero-oneliner">{HERO.oneliner}</span>
@@ -57,7 +58,7 @@ export default function App() {
                 ))}
               </div>
               {QUEM_SOU.foto ? (
-                <img src={QUEM_SOU.foto} alt={HERO.quem} style={{ width: "100%", objectFit: "cover" }} />
+                <img className="sec-foto" src={asset(QUEM_SOU.foto)} alt={HERO.quem} />
               ) : (
                 <div className="placeholder">foto — em breve</div>
               )}
@@ -81,7 +82,11 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              <div className="placeholder">foto da banda — em breve</div>
+              {BANDA.foto ? (
+                <img className="sec-foto" src={asset(BANDA.foto)} alt={BANDA.titulo} />
+              ) : (
+                <div className="placeholder">foto da banda — em breve</div>
+              )}
             </div>
           </div>
         </section>
