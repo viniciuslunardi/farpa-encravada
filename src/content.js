@@ -26,8 +26,8 @@ export const QUEM_SOU = {
   titulo: "Quem sou",
   // TODO: bio real do Vinicius (task "Conteúdo real" no board)
   paragrafos: [
-    "Sou o Vinicius — guitarrista da Budang e produtor musical (além de ser desenvolvedor de software pra pagar as contas rsrs). Divido a vida entre o estúdio e a estrada.",
-    "Produzo e mixo bandas independentes e transformo o que aprendo em vídeo: home studio, guitarra, gear e a realidade de fazer música pesada no Brasil.",
+    "Me chamo Vinicius — sou guitarrista da Budang e produtor musical (além de ser desenvolvedor de software pra pagar as contas rsrs).",
+    "Produzo bandas independentes e de vez em quando transformo o que aprendo em vídeo: produção, home studio, guitarra, gear e a realidade de fazer música pesada no Brasil.",
     "Este espaço reúne tudo que eu faço num lugar só. Da um check!",
   ],
   foto: "vinicius.jpg", // arquivo em /public
@@ -36,15 +36,15 @@ export const QUEM_SOU = {
 export const BANDA = {
   titulo: "Budang",
   descricao:
-    "Guitarrista e membro fundador na Budang. Viajando o Brasil com a banda desde 2019 de forma independente.",
-  destaque: "Em turnê sempre — acompanhe as datas no Instagram da banda.",
+    "Guitarrista e membro fundador na Budang. Viajando o Brasil com a banda desde 2019 e fazendo amizades pelo caminho. Tudo de forma independente.",
+  destaque: "Em turnê sempre — acompanhe as datas no Instagram da banda.", // @todo link instagram da budang @budang__
   foto: "budang.jpg", // arquivo em /public
 };
 
 export const PRODUCAO = {
   titulo: "Produção & Mix",
   descricao:
-    "Produção, gravação, mix & master. Trabalho como assistente de gravação do Fernando Sanches no Estúdio El Rocha em São Paulo. Quer trabalhar comigo? Responde esse formulário!",
+    "Produção, gravação, mix & master. Trabalho como assistente e engenheiro de gravação no Estúdio El Rocha em São Paulo, ao lado do grande querido Fernando Sanches. Quer trabalhar comigo? Responde esse formulário!",
   // TODO: créditos reais (task "Portfolio" no board)
   // TODO: anexar link do form
   // formato: { banda, release, ano, credito, link }
@@ -62,5 +62,5 @@ export const CONTEUDO = {
 export const CONTATO = {
   titulo: "Contato",
   descricao:
-    "Quer produzir ou mixar comigo? Fala comigo por aqui ;)",
+    "Quer produzir, mixar, tem alguma ideia e gostaria da minha ajuda pra tirar do papel, ou só quer trocar uma idea? Fala comigo por aqui ;)",
 };
