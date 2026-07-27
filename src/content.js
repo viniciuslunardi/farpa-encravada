@@ -5,10 +5,12 @@
    ============================================================ */
 
 export const LINKS = {
-  youtube: "https://youtube.com/@SEU_CANAL", // TODO: URL real do canal
-  instagram: "https://instagram.com/SEU_PERFIL", // TODO: @ real
-  spotifyBudang: "https://open.spotify.com/artist/BUDANG", // TODO: link real da Budang
-  email: "contato@exemplo.com", // TODO: e-mail público de contato
+  youtube: "https://www.youtube.com/@FarpaEncravada",
+  instagram: "https://instagram.com/farpaencravada",
+  tiktok: "https://www.tiktok.com/@farpaencravada",
+  x: "https://x.com/farpaencravada",
+  spotifyBudang: "https://open.spotify.com/artist/1ypiQPoiTZnYtOPMFtIgsN",
+  email: "farpa.rec@gmail.com",
 };
 
 export const HERO = {
