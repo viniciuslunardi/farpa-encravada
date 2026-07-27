@@ -107,6 +107,8 @@ a {
 .hero-banner {
   display: block;
   width: 100%;
+  max-width: 1440px; /* estático além disso — centraliza com o fundo preto do hero */
+  margin: 0 auto;
   height: clamp(200px, 32vh, 380px);
   object-fit: cover;
   object-position: center;
