@@ -12,6 +12,8 @@ export const LINKS = {
   spotifyBudang: "https://open.spotify.com/artist/1ypiQPoiTZnYtOPMFtIgsN",
   // playlist dos lançamentos que produzi/mixei — troca aqui quando mudar
   spotifyPlaylist: "https://open.spotify.com/playlist/1U8dYIU8tlt16mDR1HeYKO",
+  // formulário "quer trabalhar comigo?" (Google Forms)
+  form: "https://docs.google.com/forms/d/e/1FAIpQLScUt-dVraG0qSF1xIIX_am-vCeA_B3DUwPpaPjGdy7rWYEjJg/viewform",
   email: "farpa.rec@gmail.com",
 };
 
@@ -56,8 +58,8 @@ export const PRODUCAO = {
   titulo: "Produção & Mix",
   descricao:
     "Produção, gravação, mix & master. Trabalho como assistente e engenheiro de gravação no Estúdio El Rocha em São Paulo, ao lado do grande querido Fernando Sanches. Quer trabalhar comigo? Responde esse formulário!",
-  // TODO: anexar link do form
   playlistLabel: "Ouvir os lançamentos", // CTA que aponta pra LINKS.spotifyPlaylist
+  formLabel: "Quero trabalhar contigo", // CTA que aponta pra LINKS.form
 
   // === PORTFOLIO — edite este array manualmente pra manter atualizado ===
   // formato de cada projeto:

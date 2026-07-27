@@ -108,13 +108,18 @@ export default function App() {
             <div className="sec-body">
               <div>
                 <p className="lead">{PRODUCAO.descricao}</p>
-                {LINKS.spotifyPlaylist ? (
-                  <div className="acoes">
-                    <a className="btn cheio" href={LINKS.spotifyPlaylist} target="_blank" rel="noreferrer">
+                <div className="acoes">
+                  {LINKS.form ? (
+                    <a className="btn cheio" href={LINKS.form} target="_blank" rel="noreferrer">
+                      {PRODUCAO.formLabel}
+                    </a>
+                  ) : null}
+                  {LINKS.spotifyPlaylist ? (
+                    <a className="btn" href={LINKS.spotifyPlaylist} target="_blank" rel="noreferrer">
                       {PRODUCAO.playlistLabel}
                     </a>
-                  </div>
-                ) : null}
+                  ) : null}
+                </div>
               </div>
               <div className="creditos">
                 {PRODUCAO.projetos.length === 0 ? (
