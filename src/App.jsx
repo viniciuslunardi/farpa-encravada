@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { LINKS, HERO, QUEM_SOU, BANDA, PRODUCAO, CONTEUDO, CONTATO } from "./content.js";
+import { LINKS, HERO, QUEM_SOU, BANDA, PRODUCAO, PRODUCAO_STATUS, CONTEUDO, CONTATO } from "./content.js";
 
 const NAV = [
   { href: "#quem-sou", label: "Quem sou" },
@@ -108,21 +108,49 @@ export default function App() {
             <div className="sec-body">
               <div>
                 <p className="lead">{PRODUCAO.descricao}</p>
+                <div className="acoes">
+                  {LINKS.form ? (
+                    <a className="btn cheio" href={LINKS.form} target="_blank" rel="noreferrer">
+                      {PRODUCAO.formLabel}
+                    </a>
+                  ) : null}
+                  {LINKS.spotifyPlaylist ? (
+                    <a className="btn" href={LINKS.spotifyPlaylist} target="_blank" rel="noreferrer">
+                      {PRODUCAO.playlistLabel}
+                    </a>
+                  ) : null}
+                </div>
               </div>
               <div className="creditos">
-                {PRODUCAO.creditos.length === 0 ? (
+                {PRODUCAO.projetos.length === 0 ? (
                   <div className="placeholder" style={{ gridColumn: "1 / -1" }}>
-                    créditos de produção & mix — lista em breve
+                    portfolio de produção & mix — em breve
                   </div>
                 ) : (
-                  PRODUCAO.creditos.map((c) => (
-                    <a key={c.banda + c.release} className="credito-card" href={c.link || undefined}
-                      target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
-                      <div className="banda">{c.banda}</div>
-                      <div className="meta">{c.release} · {c.ano}</div>
-                      <div className="meta">{c.credito}</div>
-                    </a>
-                  ))
+                  PRODUCAO.projetos.map((p, i) => {
+                    const inner = (
+                      <>
+                        <span className={`status-badge status-${p.status}`}>
+                          {PRODUCAO_STATUS[p.status] || p.status}
+                        </span>
+                        <div className="banda">{p.banda}</div>
+                        {(p.release || p.ano) && (
+                          <div className="meta">
+                            {[p.release, p.ano].filter(Boolean).join(" · ")}
+                          </div>
+                        )}
+                        {p.credito && <div className="meta">{p.credito}</div>}
+                      </>
+                    );
+                    return p.link ? (
+                      <a key={p.banda + i} className="credito-card" href={p.link}
+                        target="_blank" rel="noreferrer">
+                        {inner}
+                      </a>
+                    ) : (
+                      <div key={p.banda + i} className="credito-card">{inner}</div>
+                    );
+                  })
                 )}
               </div>
             </div>
