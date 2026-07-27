@@ -104,13 +104,29 @@ export const PRODUCAO = {
       status: "lancado",
       link: "",
     },
+     {
+      banda: "Paraíso Purulento",
+      release: "Álbum",
+      ano: "2025",
+      credito: "Produção, Mix e Master",
+      status: "em-producao",
+      link: "",
+    },
+     {
+      banda: "Joelhos Gelados",
+      release: "EP",
+      ano: "2026",
+      credito: "Produção (guitarras e baixo), Mix e Master",
+      status: "em-producao",
+      link: "",
+    },
     {
       banda: "Ludovic",
       release: "Álbum",
       ano: "2026",
       credito: "Assistente de Gravação",
       status: "lancado",
-      link: "",
+      link: "https://open.spotify.com/track/3C7rx29J2MH2rVrEdLUKWc",
     },
     {
       banda: "Carl Satan",
@@ -118,7 +134,7 @@ export const PRODUCAO = {
       ano: "2026",
       credito: "Assistente de Gravação",
       status: "lancado",
-      link: "",
+      link: "https://open.spotify.com/track/4nyP7ONzMKjXz06o9Us4uo",
     },
     {
       banda: "Dente Canino",
@@ -126,7 +142,7 @@ export const PRODUCAO = {
       ano: "2026",
       credito: "Assistente de Gravação",
       status: "lancado",
-      link: "",
+      link: "https://open.spotify.com/track/3iLVAhL1n6xYp13Y7vGaXU",
     },
      {
       banda: "O Nó",
@@ -134,7 +150,7 @@ export const PRODUCAO = {
       ano: "2026",
       credito: "Assistente de Gravação",
       status: "lancado",
-      link: "",
+      link: "https://open.spotify.com/track/46DOfqSRuP4BhZNk6tzuC8",
     },
   ],
 };
