@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # todo dia às 09:00 UTC — rebuild pra puxar os vídeos novos do canal
+    - cron: "0 9 * * *"
 
 permissions:
   contents: read

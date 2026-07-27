@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LINKS, HERO, QUEM_SOU, BANDA, PRODUCAO, CONTEUDO, CONTATO } from "./content.js";
 
 const NAV = [
@@ -20,6 +20,17 @@ const SecHead = ({ num, children }) => (
 );
 
 export default function App() {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetch(asset("videos.json"))
+      .then((r) => (r.ok ? r.json() : []))
+      .then((data) => {
+        if (Array.isArray(data)) setVideos(data);
+      })
+      .catch(() => {});
+  }, []);
+
   return (
     <>
       <nav className="nav">
@@ -133,7 +144,23 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              <div className="placeholder">últimos vídeos — integração YouTube em breve</div>
+              <div className="videos">
+                <span className="videos-label">{CONTEUDO.videosTitulo}</span>
+                {videos.length === 0 ? (
+                  <div className="placeholder">{CONTEUDO.videosVazio}</div>
+                ) : (
+                  <div className="videos-grid">
+                    {videos.map((v) => (
+                      <a key={v.id} className="video-card" href={v.url} target="_blank" rel="noreferrer">
+                        <div className="video-thumb">
+                          <img src={v.thumb} alt={v.title} loading="lazy" />
+                        </div>
+                        <div className="video-title">{v.title}</div>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </section>
