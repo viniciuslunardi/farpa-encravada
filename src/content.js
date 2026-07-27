@@ -102,7 +102,7 @@ export const PRODUCAO = {
       ano: "2026",
       credito: "Mix & master",
       status: "lancado",
-      link: "",
+      link: "https://open.spotify.com/album/0gdT5JepWa3glEvvO1DOp6",
     },
      {
       banda: "Paraíso Purulento",
