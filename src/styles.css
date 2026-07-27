@@ -259,6 +259,71 @@ section {
   margin-top: 6px;
 }
 
+/* selo de status do projeto */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+
+.status-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gray-light);
+  flex: none;
+}
+
+.status-em-producao {
+  color: var(--accent);
+}
+
+.status-em-producao::before {
+  background: var(--accent);
+  animation: status-pulse 1.8s ease-in-out infinite;
+}
+
+.status-lancado {
+  color: #1a7f3c;
+}
+
+.status-lancado::before {
+  background: #1a7f3c;
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-em-producao::before {
+    animation: none;
+  }
+}
+
+/* card que é link ganha o hover de destaque */
+a.credito-card {
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+a.credito-card:hover {
+  border-color: var(--ink);
+}
+
 /* ---------- conteúdo: grid de vídeos do YouTube ---------- */
 
 .videos {

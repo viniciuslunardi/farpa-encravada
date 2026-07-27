@@ -10,6 +10,8 @@ export const LINKS = {
   tiktok: "https://www.tiktok.com/@farpaencravada",
   x: "https://x.com/farpaencravada",
   spotifyBudang: "https://open.spotify.com/artist/1ypiQPoiTZnYtOPMFtIgsN",
+  // playlist dos lançamentos que produzi/mixei — troca aqui quando mudar
+  spotifyPlaylist: "https://open.spotify.com/playlist/1U8dYIU8tlt16mDR1HeYKO",
   email: "farpa.rec@gmail.com",
 };
 
@@ -41,14 +43,50 @@ export const BANDA = {
   foto: "budang.jpg", // arquivo em /public
 };
 
+// Status possíveis de um projeto. A chave é o que você escreve no campo
+// `status` de cada projeto; o valor é como aparece no selo do site.
+// Pra criar um status novo, adicione uma linha aqui e um estilo em styles.css
+// (.status-<chave>). Ex.: "mixagem": "Mixagem".
+export const PRODUCAO_STATUS = {
+  "em-producao": "Em produção", // rolando agora, ainda não lançado
+  lancado: "Lançado", // já saiu (geralmente também na playlist do Spotify)
+};
+
 export const PRODUCAO = {
   titulo: "Produção & Mix",
   descricao:
     "Produção, gravação, mix & master. Trabalho como assistente e engenheiro de gravação no Estúdio El Rocha em São Paulo, ao lado do grande querido Fernando Sanches. Quer trabalhar comigo? Responde esse formulário!",
-  // TODO: créditos reais (task "Portfolio" no board)
   // TODO: anexar link do form
-  // formato: { banda, release, ano, credito, link }
-  creditos: [],
+  playlistLabel: "Ouvir os lançamentos", // CTA que aponta pra LINKS.spotifyPlaylist
+
+  // === PORTFOLIO — edite este array manualmente pra manter atualizado ===
+  // formato de cada projeto:
+  //   banda:   nome da banda/artista            (obrigatório)
+  //   release: nome do EP/single/álbum          (opcional)
+  //   ano:     ano                              (opcional)
+  //   credito: seu papel — "Produção e mix" etc (obrigatório)
+  //   status:  chave de PRODUCAO_STATUS acima    (obrigatório)
+  //   link:    URL do release ou da banda        (opcional)
+  // Ordene como quiser — aparecem na ordem da lista.
+  projetos: [
+    // TODO: trocar pelos projetos reais
+    {
+      banda: "Nome da banda",
+      release: "Nome do EP",
+      ano: "2026",
+      credito: "Produção, gravação e mix",
+      status: "em-producao",
+      link: "",
+    },
+    {
+      banda: "Outra banda",
+      release: "Single",
+      ano: "2025",
+      credito: "Mix & master",
+      status: "lancado",
+      link: "",
+    },
+  ],
 };
 
 export const CONTEUDO = {
