@@ -148,6 +148,8 @@ export default function App() {
           <span style={{ display: "flex", gap: 16 }}>
             <a href={LINKS.youtube} target="_blank" rel="noreferrer">YouTube</a>
             <a href={LINKS.instagram} target="_blank" rel="noreferrer">Instagram</a>
+            <a href={LINKS.tiktok} target="_blank" rel="noreferrer">TikTok</a>
+            <a href={LINKS.x} target="_blank" rel="noreferrer">X</a>
             <a href={LINKS.spotifyBudang} target="_blank" rel="noreferrer">Spotify</a>
           </span>
         </div>
