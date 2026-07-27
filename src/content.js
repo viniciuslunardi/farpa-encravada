@@ -23,7 +23,7 @@ export const HERO = {
   banner: "banner.jpg", // imagem de topo — arquivo em /public
   quem: "Vinicius Lunardi",
   oneliner: "Guitarrista & Produtor musical.",
-  sub: "Produção musical, home studio, palco e estrada.",
+  sub: "Produção musical, estúdio, vídeos e estrada.",
 };
 
 export const QUEM_SOU = {
@@ -169,4 +169,14 @@ export const CONTATO = {
   titulo: "Contato",
   descricao:
     "Quer produzir, mixar, tem alguma ideia e gostaria da minha ajuda pra tirar do papel, ou só quer trocar uma idea? Fala comigo por aqui ;)",
+  // formulário que abre o e-mail já preenchido (mailto, sem backend)
+  assuntoLabel: "Assunto",
+  assuntoPlaceholder: "Sobre o que é?",
+  mensagemLabel: "Mensagem",
+  mensagemPlaceholder: "Manda a ideia, o projeto, a braba...",
+  enviarLabel: "Enviar e-mail",
+  emailPrefixo: "Ou escreve direto:",
+  // reforço do Google Forms (aponta pra LINKS.form)
+  formReforco: "É um projeto de produção/mix?",
+  formReforcoLink: "Responde o formulário",
 };

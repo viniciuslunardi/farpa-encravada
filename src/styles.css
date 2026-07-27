@@ -423,17 +423,109 @@ a.credito-card:hover {
 
 /* ---------- contato ---------- */
 
+.contato-intro {
+  font-size: 17px;
+  margin-bottom: 36px;
+  max-width: 62ch;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* formulário mailto */
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo span {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+.campo input,
+.campo textarea {
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 14px 16px;
+  width: 100%;
+  resize: vertical;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: var(--gray-light);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+
+.contato-form .btn {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* coluna do e-mail direto + reforço do form */
+.contato-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contato-alt-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
 .contato-email {
-  font-size: clamp(22px, 4vw, 44px);
+  font-size: clamp(20px, 2.4vw, 30px);
   font-weight: 900;
   letter-spacing: -0.02em;
   text-decoration: none;
   border-bottom: 4px solid var(--accent);
   word-break: break-all;
+  align-self: flex-start;
 }
 
 .contato-email:hover {
   color: var(--accent);
+}
+
+.contato-form-reforco {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--gray);
+}
+
+.contato-form-reforco a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+  white-space: nowrap;
 }
 
 /* ---------- footer ---------- */
@@ -472,6 +564,10 @@ footer {
   }
   .sec-body {
     grid-template-columns: 1fr;
+  }
+  .contato-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
   .nav {
     position: static;

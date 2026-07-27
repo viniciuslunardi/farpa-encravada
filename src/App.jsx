@@ -21,6 +21,8 @@ const SecHead = ({ num, children }) => (
 
 export default function App() {
   const [videos, setVideos] = useState([]);
+  const [assunto, setAssunto] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
   useEffect(() => {
     fetch(asset("videos.json"))
@@ -30,6 +32,15 @@ export default function App() {
       })
       .catch(() => {});
   }, []);
+
+  const enviarEmail = (e) => {
+    e.preventDefault();
+    const params = [];
+    if (assunto.trim()) params.push(`subject=${encodeURIComponent(assunto.trim())}`);
+    if (mensagem.trim()) params.push(`body=${encodeURIComponent(mensagem.trim())}`);
+    const query = params.length ? `?${params.join("&")}` : "";
+    window.location.href = `mailto:${LINKS.email}${query}`;
+  };
 
   return (
     <>
@@ -196,8 +207,43 @@ export default function App() {
         <section id="contato" style={{ borderBottom: "none" }}>
           <div className="wrap">
             <SecHead num="05">{CONTATO.titulo}</SecHead>
-            <p style={{ fontSize: 17, marginBottom: 28, maxWidth: "62ch" }}>{CONTATO.descricao}</p>
-            <a className="contato-email" href={`mailto:${LINKS.email}`}>{LINKS.email}</a>
+            <p className="contato-intro">{CONTATO.descricao}</p>
+            <div className="contato-grid">
+              <form className="contato-form" onSubmit={enviarEmail}>
+                <label className="campo">
+                  <span>{CONTATO.assuntoLabel}</span>
+                  <input
+                    type="text"
+                    value={assunto}
+                    onChange={(e) => setAssunto(e.target.value)}
+                    placeholder={CONTATO.assuntoPlaceholder}
+                  />
+                </label>
+                <label className="campo">
+                  <span>{CONTATO.mensagemLabel}</span>
+                  <textarea
+                    rows={5}
+                    value={mensagem}
+                    onChange={(e) => setMensagem(e.target.value)}
+                    placeholder={CONTATO.mensagemPlaceholder}
+                  />
+                </label>
+                <button className="btn cheio" type="submit">{CONTATO.enviarLabel}</button>
+              </form>
+
+              <div className="contato-alt">
+                <span className="contato-alt-label">{CONTATO.emailPrefixo}</span>
+                <a className="contato-email" href={`mailto:${LINKS.email}`}>{LINKS.email}</a>
+                {LINKS.form ? (
+                  <p className="contato-form-reforco">
+                    {CONTATO.formReforco}{" "}
+                    <a href={LINKS.form} target="_blank" rel="noreferrer">
+                      {CONTATO.formReforcoLink} →
+                    </a>
+                  </p>
+                ) : null}
+              </div>
+            </div>
           </div>
         </section>
       </main>
