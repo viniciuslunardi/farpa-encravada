@@ -23,7 +23,7 @@ export const HERO = {
   banner: "banner.jpg", // imagem de topo — arquivo em /public
   quem: "Vinicius Lunardi",
   oneliner: "Guitarrista & Produtor musical.",
-  sub: "Produção musical, home studio, palco e estrada.",
+  sub: "Produção musical, estúdio, vídeos e estrada.",
 };
 
 export const QUEM_SOU = {
