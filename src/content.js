@@ -126,7 +126,7 @@ export const PRODUCAO = {
       ano: "2026",
       credito: "Assistente de Gravação",
       status: "lancado",
-      link: "https://open.spotify.com/track/3C7rx29J2MH2rVrEdLUKWc",
+      link: "https://open.spotify.com/album/3qfKxz42RXWjWLhiALSVOy",
     },
     {
       banda: "Carl Satan",
