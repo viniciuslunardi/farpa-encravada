@@ -173,7 +173,7 @@ export const CONTATO = {
   assuntoLabel: "Assunto",
   assuntoPlaceholder: "Sobre o que é?",
   mensagemLabel: "Mensagem",
-  mensagemPlaceholder: "Manda a ideia, o projeto, a braba...",
+  mensagemPlaceholder: "Manda sua ideia/projeto!",
   enviarLabel: "Enviar e-mail",
   emailPrefixo: "Ou escreve direto:",
   // reforço do Google Forms (aponta pra LINKS.form)
